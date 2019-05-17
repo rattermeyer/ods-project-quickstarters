@@ -35,7 +35,7 @@ sed -i.final -e "s|value: BITBUCKET_HOST|value: $BITBUCKET_HOST|g" ../templates/
 sed -i.final -e "s|value: REPO_BASE|value: $REPO_BASE|g" ../templates/cd-jenkins-webhook-proxy.yml
 sed -i.final -e "s|value: PIPELINE_TRIGGER_SECRET|value: $PIPELINE_TRIGGER_SECRET|g" ../templates/cd-jenkins-webhook-proxy.yml
 
-sed -i.final -e "s|value: CD_USER_PWD|value: $CD_USER_PWD|g" ../templates/secrets.yml
+sed -i.final -e "s|value: CD_USER_PWD|value: $CD_USER_PWD|g" -e "s|value: BITBUCKET_CA_BUNDLE|value: $BITBUCKET_CA_BUNDLE|g" ../templates/secrets.yml
 
 sed -i.final -e "s|value: NEXUS_URL|value: $NEXUS_URL|g" ../templates/rshiny-app.yml
 sed -i.final -e "s|value: NEXUS_USERNAME|value: $NEXUS_USERNAME|g" ../templates/rshiny-app.yml

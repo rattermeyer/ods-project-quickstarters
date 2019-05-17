@@ -14,6 +14,7 @@ objects:
   data:
     password: '${CD_USER_PWD}'
     username: '${CD_USER_ID}'
+    ca.crt: '${BITBUCKET_CA_BUNDLE}'
   kind: Secret
   metadata:
     name: cd-user-with-password
